@@ -1,8 +1,9 @@
 #ifndef BUSYBEAVER_H
 #define BUSYBEAVER_H
 
-#include "card.h"
 #include "tape.h"
+
+#include "card.h"
 
 #include <vector>
 
@@ -15,7 +16,7 @@ namespace turing {
             bool playCard();
             int getSteps();
       private: 
-            std::vector<turing::Card> deck;
+            std::vector<turing::card> deck;
             int current_card;
             turing::Tape tape;
             int steps;
