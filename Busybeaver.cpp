@@ -2,11 +2,14 @@
 #include "card.h"
 #include "beaver_card_side.h"
 
+#include "c.h"
+#include "side.h"
+
 #include <vector>
 
 namespace turing {
       Busybeaver::Busybeaver(){
-            Busybeaver::deck = std::vector<turing::Card>();
+            Busybeaver::deck = std::vector<turing::c>();
             Busybeaver::tape = turing::Tape();
             Busybeaver::current_card = 0;
       }
