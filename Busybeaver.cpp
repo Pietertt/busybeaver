@@ -5,13 +5,10 @@
 #include <vector>
 
 namespace turing {
-      Busybeaver::Busybeaver(bool what_to_write_zero, bool should_right_zero, int next_symbol_zero, bool what_to_write_one, bool should_right_one, int next_symbol_one){
+      Busybeaver::Busybeaver(){
             Busybeaver::deck = std::vector<turing::Card>();
             Busybeaver::tape = turing::Tape();
             Busybeaver::current_card = 0;
-
-            // initializes the first card
-            Busybeaver::add_card(what_to_write_zero, should_right_zero, next_symbol_zero, what_to_write_one, should_right_one, next_symbol_one);
       }
 
       // returns the tape as a string

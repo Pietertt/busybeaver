@@ -9,7 +9,7 @@
 namespace turing {
       class Busybeaver {
       public:
-            Busybeaver(bool what_to_write_zero, bool should_right_zero, int next_symbol_zero, bool what_to_write_one, bool should_right_one, int next_symbol_one);
+            Busybeaver();
             std::string print();
             void add_card(bool what_to_write_zero, bool should_right_zero, int next_symbol_zero, bool what_to_write_one, bool should_right_one, int next_symbol_one);
             bool playCard();
