@@ -10,7 +10,7 @@ namespace turing {
             Busybeaver::tape = turing::Tape();
             Busybeaver::current_card = 0;
 
-            
+            // initializes the first card
             Busybeaver::add_card(what_to_write_zero, should_right_zero, next_symbol_zero, what_to_write_one, should_right_one, next_symbol_one);
       }
 
@@ -19,7 +19,7 @@ namespace turing {
             return Busybeaver::tape.print();
       }
 
-      
+      // adds a new card by creating one and pushing it to the list
       void Busybeaver::add_card(bool what_to_write_zero, bool should_right_zero, int next_symbol_zero, bool what_to_write_one, bool should_right_one, int next_symbol_one){
             
             Card card(what_to_write_zero, should_right_zero, next_symbol_zero, what_to_write_one, should_right_one, next_symbol_one);
@@ -33,13 +33,14 @@ namespace turing {
                   return false;
             }
 
+            // an empty cardside to play with
             Card_side tempmem;
 
             // sets the variable 'tempmem' to either the head or tail of the card. 
             // this is based on the return data from the 'read()' function of the tape class
-            if(Busybeaver::tape.read()){
+            if(Busybeaver::tape.read()){ // if the current character is a '1'
                   tempmem = Busybeaver::deck[Busybeaver::current_card].getSideOne();
-            } else {
+            } else { // if the current character is a '0'
                   tempmem = Busybeaver::deck[Busybeaver::current_card].getSideZero();
             }
 

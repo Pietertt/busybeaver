@@ -42,11 +42,12 @@ int main(){
       std::chrono::high_resolution_clock::time_point t1 = std::chrono::high_resolution_clock::now();
       std::cout << "Started!" << std::endl;
 
-      turing::Busybeaver beaver(true, true, 1, true, false, 2);
-      beaver.add_card(true, true, 2, true, true, 1);
-      beaver.add_card(true, true, 3, false, false, 4);
-      beaver.add_card(true, false, 0, true, false, 3);
-      beaver.add_card(true, true, -1, false, false, 0);
+      // what to write, should right, next symbol
+      turing::Busybeaver beaver(1, true, 1, 1, false, 2);
+      beaver.add_card(1, true, 2, 1, true, 1);
+      beaver.add_card(1, true, 3, 0, false, 4);
+      beaver.add_card(1, false, 0, 1, false, 3);
+      beaver.add_card(1, true, -1, 0, false, 0);
 
       while(beaver.playCard()){
             //std::cout << beaver.print() << std::endl;
