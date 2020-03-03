@@ -23,7 +23,7 @@ int main(){
 
       std::chrono::high_resolution_clock::time_point t2 = std::chrono::high_resolution_clock::now();
       std::chrono::duration<double> time_span = std::chrono::duration_cast<std::chrono::duration<double>>(t2 - t1);
-      std::cout << "Ik took the beaver " << time_span.count() << " seconds" << std::endl;
+      std::cout << "It took the beaver " << time_span.count() << " seconds" << std::endl;
       std::cout << "Steps: " << beaver.getSteps() << std::endl;
 
       return 0;
