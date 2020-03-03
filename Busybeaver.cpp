@@ -45,11 +45,11 @@ namespace turing {
 
             // write either a 1 or a 0 to the tape. 
             // This is based on the 'what_to_write' variable, which depends on the given input
-            Busybeaver::tape.write(tempmem.is_what_to_write());
+            Busybeaver::tape.write(tempmem.what_to_write);
 
             //shift the tape to either left or right.
             // This is based on the 'should_right' variable, which depens on the given input
-            if(tempmem.is_should_right()){
+            if(tempmem.should_right){
                   Busybeaver::tape.right();
             } else {
                   Busybeaver::tape.left();
@@ -59,7 +59,7 @@ namespace turing {
             Busybeaver::steps = Busybeaver::steps + 1;
 
             
-            Busybeaver::current_card = tempmem.get_next_symbol(); 
+            Busybeaver::current_card = tempmem.next_symbol; 
 
             return true;
       }
