@@ -12,7 +12,7 @@ namespace turing {
       public:
             Busybeaver();
             std::string print();
-            void add_card(bool what_to_write_zero, bool should_right_zero, int next_symbol_zero, bool what_to_write_one, bool should_right_one, int next_symbol_one);
+            void add_card(bool what_to_write_zero, bool direction_zero, int next_symbol_zero, bool what_to_write_one, bool direction_one, int next_symbol_one);
             bool playCard();
             int getSteps();
       private: 

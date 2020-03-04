@@ -3,8 +3,6 @@
 
 #include "tape.h"
 #include "Busybeaver.h"
-#include "beaver_card_side.h"
-
 int main(){
       std::chrono::high_resolution_clock::time_point t1 = std::chrono::high_resolution_clock::now();
       std::cout << "Started!" << std::endl;
